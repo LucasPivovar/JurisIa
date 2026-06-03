@@ -6,7 +6,6 @@ import OverviewTab from '../components/Tabs/OverviewTab.vue'
 import ChatTab from '../components/Tabs/ChatTab.vue'
 import DocumentsTab from '../components/Tabs/DocumentsTab.vue'
 import TimelineTab from '../components/Tabs/TimelineTab.vue'
-import JurisprudenceTab from '../components/Tabs/JurisprudenceTab.vue'
 import DropdownMenu from '../components/DropdownMenu.vue'
 import { useToast } from '../composables/useToast'
 
@@ -17,7 +16,6 @@ const activeTab = ref('overview') // overview, chat, documents, timeline
 const tabs = [
   { id: 'overview', label: 'Visão geral' },
   { id: 'chat', label: 'Chat' },
-  { id: 'jurisprudence', label: 'Jurisprudências' },
   { id: 'documents', label: 'Documentos' },
   { id: 'timeline', label: 'Linha do tempo' }
 ]
@@ -70,7 +68,6 @@ const caseData = {
     <div class="tab-content">
       <OverviewTab v-if="activeTab === 'overview'" />
       <ChatTab v-if="activeTab === 'chat'" />
-      <JurisprudenceTab v-if="activeTab === 'jurisprudence'" />
       <DocumentsTab v-if="activeTab === 'documents'" />
       <TimelineTab v-if="activeTab === 'timeline'" />
     </div>
